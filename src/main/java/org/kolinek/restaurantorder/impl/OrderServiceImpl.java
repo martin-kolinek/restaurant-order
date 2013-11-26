@@ -1,10 +1,6 @@
 package org.kolinek.restaurantorder.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.jws.WebService;
-
 import org.apache.log4j.LogManager;
 import org.kolinek.restaurantorder.Menu;
 import org.kolinek.restaurantorder.MenuItem;
@@ -18,11 +14,11 @@ public class OrderServiceImpl implements OrderService {
 	private Menu menu;
 
 	public OrderServiceImpl() {
-		List<MenuItem> items = new ArrayList<MenuItem>();
-		items.add(new MenuItem(0, "Salomon", "Smoked salomon"));
-		items.add(new MenuItem(1, "Steak", "Steak with potatoes"));
-		items.add(new MenuItem(2, "Fried chicken", "Fried chicken with fries"));
-		this.menu = new Menu(items);
+		this.menu = new Menu();
+		this.menu.getItems().add(new MenuItem(0, "Salomon", "Smoked salomon"));
+		this.menu.getItems().add(new MenuItem(1, "Steak", "Steak with potatoes"));
+		this.menu.getItems().add(new MenuItem(2, "Fried chicken", "Fried chicken with fries"));
+		
 	}
 
 	public Menu getMenu() {
