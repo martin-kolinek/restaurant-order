@@ -7,7 +7,7 @@
 		http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
 ">
 
-	<jaxws:endpoint id="CustomerServiceHTTP" 
+	<jaxws:endpoint id="OrderServiceHTTP" 
 		xmlns:restord="http://restaurantorder.kolinek.org/"
 		serviceName="restord:OrderService" 
 		endpointName="restord:OrderServiceEndpoint"
